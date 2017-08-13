@@ -44,7 +44,6 @@ function sub(L, start, len) {
 	if(i < start) {
 		return null;
 	}
-
 	// get new list
 	var cur = L,
 		p = L;
