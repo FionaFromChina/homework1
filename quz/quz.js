@@ -8,7 +8,12 @@
  * @returns {List}
  */
 function dcate(A, B) {
-	/** Fill in here **/
+	var p = A ;
+	while (A.tail) {
+		A = A.tail;
+	}
+	A.tail = B;
+	return p;
 }
 
 /**
@@ -23,5 +28,34 @@ function dcate(A, B) {
  * @returns {List}
  */
 function sub(L, start, len) {
-	/** Fill in here **/
+
+	// check
+	if(!L) {
+		return null;
+	}
+	start = start || 0;
+	len = len || 0;
+
+	// get begin pointer
+	for( var i = 0 ; i < start && L.tail; i++) {
+		L = L.tail;
+		i ++;
+	}
+	if(i < start) {
+		return null;
+	}
+
+	// get new list
+	var cur = L,
+		p = L;
+	for(var j = 0 ; j <= len ; j++) {
+		cur = cur.tail;
+		j ++;
+	}
+	if(j <= len) {
+		return null;
+	}
+	cur.tail = null;
+
+	return p.tail;
 }
