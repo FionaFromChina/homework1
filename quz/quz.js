@@ -58,3 +58,8 @@ function sub(L, start, len) {
 
 	return p.tail;
 }
+
+module.exports = {
+	sub : sub,
+	dcate: dcate
+};

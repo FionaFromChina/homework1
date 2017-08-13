@@ -1,5 +1,11 @@
-describe('unit test for quz.js', function () {
+var List = require('../js/list.js');
+var quz = require('../quz/quz.js');
 
+var dcate = quz.dcate,
+    sub = quz.sub;
+
+
+describe('unit test for quz.js', function () {
     var A = List.list([4, 6, 7, 3, 8]),
         B = List.list([3, 2, 5, 9]),
         C = List.list([19, 8, 7, 3, 2]);
